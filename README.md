@@ -1,2 +1,4 @@
 # ImageEffect
-A image effect extension from Apple, including Objective-c and Swift 3.0
+UIImage+ImageEffects is a image effect category from Apple, this is a swift 3.0 version I worte.
+
+
