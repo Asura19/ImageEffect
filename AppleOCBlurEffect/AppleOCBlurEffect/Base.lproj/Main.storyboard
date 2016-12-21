@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="blN-bl-v2Z">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="fDn-SU-kva">
+            <objects>
+                <viewController id="blN-bl-v2Z" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vYq-af-8OS"/>
+                        <viewControllerLayoutGuide type="bottom" id="1cT-5c-zuB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UgB-a0-Xuq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains.png" translatesAutoresizingMaskIntoConstraints="NO" id="fdR-ey-7tB">
+                                <rect key="frame" x="16" y="45" width="343" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fdR-ey-7tB" secondAttribute="height" multiplier="81:79" id="Sws-AR-mdx"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="35" translatesAutoresizingMaskIntoConstraints="NO" id="6hW-pg-NPS">
+                                <rect key="frame" x="8" y="594" width="359" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ed0-OE-nHu"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="valueChanged:" destination="blN-bl-v2Z" eventType="valueChanged" id="uPm-t0-MvW"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6hW-pg-NPS" secondAttribute="trailing" constant="10" id="FdY-Q7-bxe"/>
+                            <constraint firstItem="fdR-ey-7tB" firstAttribute="leading" secondItem="UgB-a0-Xuq" secondAttribute="leading" constant="16" id="GeN-sg-Up1"/>
+                            <constraint firstItem="6hW-pg-NPS" firstAttribute="leading" secondItem="UgB-a0-Xuq" secondAttribute="leading" constant="10" id="R7v-pn-uWJ"/>
+                            <constraint firstItem="fdR-ey-7tB" firstAttribute="top" secondItem="vYq-af-8OS" secondAttribute="bottom" constant="25" id="exF-eP-Dw0"/>
+                            <constraint firstItem="1cT-5c-zuB" firstAttribute="top" secondItem="6hW-pg-NPS" secondAttribute="bottom" constant="43" id="gYp-JX-6Vu"/>
+                            <constraint firstAttribute="trailing" secondItem="fdR-ey-7tB" secondAttribute="trailing" constant="16" id="lAY-fg-6Sm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="fdR-ey-7tB" id="JOH-Cs-f09"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QYO-dE-o43" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mountains.png" width="800" height="600"/>
+    </resources>
+</document>

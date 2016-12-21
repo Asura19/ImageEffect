@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppleSwiftBlurEffect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains.png" translatesAutoresizingMaskIntoConstraints="NO" id="CTF-Wd-aDE">
+                                <rect key="frame" x="16" y="45" width="343" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CTF-Wd-aDE" secondAttribute="height" multiplier="81:79" id="q6b-q9-WUj"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="35" translatesAutoresizingMaskIntoConstraints="NO" id="eaB-gi-bKC">
+                                <rect key="frame" x="8" y="594" width="359" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BPr-2O-MLh"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="valueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="glZ-Wg-lpK"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eaB-gi-bKC" secondAttribute="bottom" constant="43" id="5Rt-Ja-4UE"/>
+                            <constraint firstAttribute="trailing" secondItem="CTF-Wd-aDE" secondAttribute="trailing" constant="16" id="9Nl-d9-K4e"/>
+                            <constraint firstItem="CTF-Wd-aDE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="Ii9-Zt-jfY"/>
+                            <constraint firstItem="eaB-gi-bKC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="PrM-nR-JRw"/>
+                            <constraint firstItem="CTF-Wd-aDE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="cxj-QY-5J8"/>
+                            <constraint firstAttribute="trailing" secondItem="eaB-gi-bKC" secondAttribute="trailing" constant="10" id="vwj-Jo-lLK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="CTF-Wd-aDE" id="Cpv-gR-E6v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mountains.png" width="800" height="600"/>
+    </resources>
+</document>
